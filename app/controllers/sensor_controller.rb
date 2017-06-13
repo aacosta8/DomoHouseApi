@@ -1,4 +1,13 @@
 class SensorController < ApplicationController
+
+  def list
+    @sensors = Sensor.all
+    puts @sensors.last.name
+    render @sensors.to_json
+  end
+
+
+
   def create
     @sensor = Sensor.new(name: params[:name])
 
@@ -23,7 +32,13 @@ class SensorController < ApplicationController
   end
 
   def update
-
+    @sensor = Sensor.find_by(id: params[:id])
+    @sensor.name = params[:name]
+    if @sensor.save
+      render :status
+    else
+      render status: 500
+    end
   end
 
   # private

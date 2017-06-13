@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   delete 'sensor/:id', to: 'sensor#delete'
 
-  get 'sensor/update/:id', to: 'sensor#update'
+  get 'sensor/update/:id/:name', to: 'sensor#update'
 
+  get 'sensors/', to: 'sensor#list'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
