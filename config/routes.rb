@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'sensor_variable/list'
+
+  get 'sensor_variable/create'
+
+  post 'sensor_variable', to: 'sensor_variable#create'
+
   get 'variables/', to: 'variable#list'
 
   get 'variable/create'

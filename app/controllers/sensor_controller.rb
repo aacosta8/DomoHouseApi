@@ -2,7 +2,6 @@ class SensorController < ApplicationController
 
   def list
     @sensors = Sensor.all
-    puts @sensors.last.name
     render json: @sensors.to_json
   end
 
