@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  get 'variables/', to: 'variable#list'
+
+  get 'variable/create'
+
+  get 'variable/update/:id', to: 'variable#update'
+
+  delete 'variable/:id', to: 'variable#delete'
+
+
   get 'sensor/create'
 
   delete 'sensor/:id', to: 'sensor#delete'
