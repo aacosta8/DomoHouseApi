@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'sensor_variable/list'
+  get 'registers/', to: 'register#list'
 
-  get 'sensor_variable/create'
+  get 'register/create'
 
-  post 'sensor_variable', to: 'sensor_variable#create'
 
   get 'variables/', to: 'variable#list'
 

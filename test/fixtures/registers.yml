@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sensor: one
+  variable: one
+  value: 1.5
+
+two:
+  sensor: two
+  variable: two
+  value: 1.5
